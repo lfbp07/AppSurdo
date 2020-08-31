@@ -12,9 +12,9 @@
 		2836F82724FD3CAB00A75E53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2836F82524FD3CAB00A75E53 /* Main.storyboard */; };
 		2836F82924FD3CAC00A75E53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2836F82824FD3CAC00A75E53 /* Assets.xcassets */; };
 		2836F82C24FD3CAC00A75E53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2836F82A24FD3CAC00A75E53 /* LaunchScreen.storyboard */; };
-		2836F83424FD42B000A75E53 /* QuestionViwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836F83324FD42B000A75E53 /* QuestionViwController.swift */; };
 		2836F83624FD42F500A75E53 /* EquationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836F83524FD42F500A75E53 /* EquationViewController.swift */; };
 		2836F83824FD436F00A75E53 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836F83724FD436F00A75E53 /* ARViewController.swift */; };
+		86BD6B5E24FD5044000920CF /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BD6B5D24FD5044000920CF /* InitialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +25,9 @@
 		2836F82824FD3CAC00A75E53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2836F82B24FD3CAC00A75E53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2836F82D24FD3CAC00A75E53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2836F83324FD42B000A75E53 /* QuestionViwController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViwController.swift; sourceTree = "<group>"; };
 		2836F83524FD42F500A75E53 /* EquationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationViewController.swift; sourceTree = "<group>"; };
 		2836F83724FD436F00A75E53 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		86BD6B5D24FD5044000920CF /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +63,12 @@
 				2836F81F24FD3CAB00A75E53 /* AppDelegate.swift */,
 				2836F82124FD3CAB00A75E53 /* art.scnassets */,
 				2836F82524FD3CAB00A75E53 /* Main.storyboard */,
-				2836F83324FD42B000A75E53 /* QuestionViwController.swift */,
 				2836F83524FD42F500A75E53 /* EquationViewController.swift */,
 				2836F83724FD436F00A75E53 /* ARViewController.swift */,
 				2836F82824FD3CAC00A75E53 /* Assets.xcassets */,
 				2836F82A24FD3CAC00A75E53 /* LaunchScreen.storyboard */,
 				2836F82D24FD3CAC00A75E53 /* Info.plist */,
+				86BD6B5D24FD5044000920CF /* InitialViewController.swift */,
 			);
 			path = AppSurdo;
 			sourceTree = "<group>";
@@ -145,8 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86BD6B5E24FD5044000920CF /* InitialViewController.swift in Sources */,
 				2836F83624FD42F500A75E53 /* EquationViewController.swift in Sources */,
-				2836F83424FD42B000A75E53 /* QuestionViwController.swift in Sources */,
 				2836F82024FD3CAB00A75E53 /* AppDelegate.swift in Sources */,
 				2836F83824FD436F00A75E53 /* ARViewController.swift in Sources */,
 			);
