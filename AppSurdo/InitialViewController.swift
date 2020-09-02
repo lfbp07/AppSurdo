@@ -12,43 +12,43 @@ import UIKit
 class InitialViewController: UIViewController {
 
 
+    @IBOutlet weak var camButton: UIButton!
     var cores: [UIColor] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let logo = UIImageView(image: UIImage(named: "Rectangle"))
+        //let logo = UIImageView(image: UIImage(named: "Rectangle"))
     
-        var rectangle = UIImageView(image: UIImage(named: "Rectangle"))
+        var rectangle = UIImageView(image: UIImage(named: "WhiteRectangle"))
         var factOfSeries = UILabel()
         factOfSeries.text = "Fato de série"
         let command = UILabel()
         command.numberOfLines = 0
         command.text = " Procure as cartas na cena para formar uma combinação algébrica que resulte em (valor)."
-        let camButton = UIButton()
         camButton.setImage(UIImage(named: "Cam"), for: .normal)
         
         rectangle.addSubview(factOfSeries)
         rectangle.addSubview(command)
         rectangle.addSubview(camButton)
         
-        self.view.addSubview(logo)
+        //self.view.addSubview(logo)
         self.view.addSubview(rectangle)
         
-        logo.translatesAutoresizingMaskIntoConstraints = false
+        //logo.translatesAutoresizingMaskIntoConstraints = false
         factOfSeries.translatesAutoresizingMaskIntoConstraints = false
         command.translatesAutoresizingMaskIntoConstraints = false
         rectangle.translatesAutoresizingMaskIntoConstraints = false
         camButton.translatesAutoresizingMaskIntoConstraints  = false
         
         
-        self.view.addConstraint(NSLayoutConstraint(item: logo, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1.0, constant: 70))
-        logo.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        logo.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        logo.heightAnchor.constraint(equalToConstant: 50).isActive = true
+//        self.view.addConstraint(NSLayoutConstraint(item: logo, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1.0, constant: 70))
+//        logo.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+//        logo.widthAnchor.constraint(equalToConstant: 50).isActive = true
+//        logo.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        self.view.addConstraint(NSLayoutConstraint(item: rectangle, attribute: .top, relatedBy: .equal, toItem: logo, attribute: .bottom, multiplier: 1.0, constant: 100))
+        self.view.addConstraint(NSLayoutConstraint(item: rectangle, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1.0, constant: 200))
         rectangle.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
 //         rectangle.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         //rectangle.widthAnchor.constraint(equalToConstant: self.view.frame.width*0.8).isActive = true
@@ -65,7 +65,7 @@ class InitialViewController: UIViewController {
         command.heightAnchor.constraint(equalToConstant: 70).isActive = true
 
         camButton.centerXAnchor.constraint(equalTo: rectangle.centerXAnchor).isActive = true
-        self.view.addConstraint(NSLayoutConstraint(item: camButton, attribute: .top, relatedBy: .equal, toItem: command, attribute: .bottom, multiplier: 1.0, constant: 30))
+        self.view.addConstraint(NSLayoutConstraint(item: camButton!, attribute: .top, relatedBy: .equal, toItem: command, attribute: .bottom, multiplier: 1.0, constant: 30))
         camButton.widthAnchor.constraint(equalToConstant: 70).isActive = true
         camButton.heightAnchor.constraint(equalToConstant: 66).isActive = true
         

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -14,13 +14,35 @@
                     <view key="view" contentMode="scaleToFill" id="e5W-ug-wWJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="3ir-zE-Ii8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KP1-Fa-GNj">
+                                <rect key="frame" x="192" y="478" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3ir-zE-Ii8" firstAttribute="leading" secondItem="Jhi-WN-82V" secondAttribute="leading" id="Gd2-xj-NoX"/>
+                            <constraint firstAttribute="bottom" secondItem="3ir-zE-Ii8" secondAttribute="bottom" id="qT9-sh-RON"/>
+                            <constraint firstItem="3ir-zE-Ii8" firstAttribute="top" secondItem="e5W-ug-wWJ" secondAttribute="top" id="sky-Kr-Q6d"/>
+                            <constraint firstItem="3ir-zE-Ii8" firstAttribute="trailing" secondItem="Jhi-WN-82V" secondAttribute="trailing" id="yDl-Dd-rWm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Jhi-WN-82V"/>
                     </view>
+                    <connections>
+                        <outlet property="camButton" destination="KP1-Fa-GNj" id="cKg-ps-AZc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ex-jz-UhG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-665" y="138"/>
+            <point key="canvasLocation" x="-665.21739130434787" y="137.94642857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -33,23 +55,43 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clu-cm-a6e">
+                                <rect key="frame" x="44" y="687" width="84" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Card"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EK8-MR-Ylu">
+                                <rect key="frame" x="281" y="687" width="84" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Card"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moS-DQ-1IN">
+                                <rect key="frame" x="165" y="687" width="84" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Card"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="3Oy-E2-bK0"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="M84-GA-Jrp"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="ZTb-29-tg8"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="sB5-Yu-9OR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tiZ-i6-T5B"/>
                     <connections>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="OoP-OQ-SJX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
         <!--Equation View Controller-->
         <scene sceneID="6Ry-Gf-KIt">
@@ -58,13 +100,32 @@
                     <view key="view" contentMode="scaleToFill" id="q1L-Jq-0gR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="gyj-hw-RIB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gyj-hw-RIB" firstAttribute="leading" secondItem="QBh-Yo-Mck" secondAttribute="leading" id="IIZ-OJ-idu"/>
+                            <constraint firstItem="gyj-hw-RIB" firstAttribute="trailing" secondItem="QBh-Yo-Mck" secondAttribute="trailing" id="eKo-4k-jfU"/>
+                            <constraint firstItem="gyj-hw-RIB" firstAttribute="top" secondItem="q1L-Jq-0gR" secondAttribute="top" id="hzg-DX-ZH1"/>
+                            <constraint firstAttribute="bottom" secondItem="gyj-hw-RIB" secondAttribute="bottom" id="jmY-SV-qT9"/>
+                            <constraint firstItem="gyj-hw-RIB" firstAttribute="top" secondItem="q1L-Jq-0gR" secondAttribute="top" id="lyv-wT-Yau"/>
+                            <constraint firstAttribute="bottom" secondItem="gyj-hw-RIB" secondAttribute="bottom" id="mfW-xi-1x1"/>
+                            <constraint firstItem="gyj-hw-RIB" firstAttribute="leading" secondItem="QBh-Yo-Mck" secondAttribute="leading" id="uxp-IZ-N5j"/>
+                            <constraint firstItem="gyj-hw-RIB" firstAttribute="trailing" secondItem="QBh-Yo-Mck" secondAttribute="trailing" id="vYc-zE-zOW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QBh-Yo-Mck"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zua-yw-jfc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="932" y="138"/>
+            <point key="canvasLocation" x="931.88405797101461" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="236" height="512"/>
+        <image name="Card" width="512" height="512"/>
+    </resources>
 </document>
