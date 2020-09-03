@@ -31,7 +31,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Cam"/>
                                 <connections>
-                                    <segue destination="BV1-FR-VrT" kind="show" id="DgU-1I-aCa"/>
+                                    <segue destination="BV1-FR-VrT" kind="presentation" modalPresentationStyle="fullScreen" id="DgU-1I-aCa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -57,32 +57,32 @@
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="ARViewController" customModule="AppSurdo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clu-cm-a6e">
-                                <rect key="frame" x="44" y="687" width="84" height="86"/>
+                                <rect key="frame" x="48" y="663" width="84" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Card"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EK8-MR-Ylu">
-                                <rect key="frame" x="281" y="687" width="84" height="86"/>
+                                <rect key="frame" x="281" y="663" width="84" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Card"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moS-DQ-1IN">
-                                <rect key="frame" x="165" y="687" width="84" height="86"/>
+                                <rect key="frame" x="165" y="663" width="84" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Card"/>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QnH-B7-yh0">
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QnH-B7-yh0">
                                 <rect key="frame" x="70" y="207" width="295" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lababababababa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaJ-tg-sga">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaJ-tg-sga">
                                         <rect key="frame" x="39" y="59" width="235" height="194"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -100,13 +100,14 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2J-43-snF">
-                                <rect key="frame" x="373" y="766" width="31" height="33"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2J-43-snF">
+                                <rect key="frame" x="316" y="777" width="78" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="-&gt;"/>
+                                <state key="normal" title="-&gt;" image="Arrow2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <segue destination="dkw-ts-Veh" kind="presentation" identifier="EquationSegue" id="0Mx-uS-ulX"/>
+                                    <segue destination="dkw-ts-Veh" kind="presentation" identifier="EquationSegue" modalPresentationStyle="fullScreen" id="0Mx-uS-ulX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -128,6 +129,7 @@
                         <outlet property="card1" destination="Clu-cm-a6e" id="rnu-Za-hF8"/>
                         <outlet property="card2" destination="moS-DQ-1IN" id="wEw-Nt-QjO"/>
                         <outlet property="card3" destination="EK8-MR-Ylu" id="NJY-el-LnO"/>
+                        <outlet property="nextButton" destination="A2J-43-snF" id="Yq8-Eh-kt4"/>
                         <outlet property="popLabel" destination="CaJ-tg-sga" id="GYT-xr-jgC"/>
                         <outlet property="popView" destination="QnH-B7-yh0" id="S4n-gB-O4T"/>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="OoP-OQ-SJX"/>
@@ -142,11 +144,11 @@
             <objects>
                 <viewController id="dkw-ts-Veh" customClass="EquationViewController" customModule="AppSurdo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q1L-Jq-0gR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="gyj-hw-RIB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="gyj-hw-RIB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -169,6 +171,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Arrow2" width="512" height="512"/>
         <image name="Background" width="236" height="512"/>
         <image name="Cam" width="484" height="512"/>
         <image name="Card" width="512" height="512"/>

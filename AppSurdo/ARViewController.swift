@@ -33,7 +33,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     var cubes: [SCNNode]!
     var cardButtons: [UIButton] = []
     var currentCard = 0
-
+    @IBOutlet weak var nextButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -87,6 +88,10 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
                     cardButtons[currentCard].setImage(UIImage(named: "CardActive"), for: .normal)
                     currentCard+=1
                     result.node.removeFromParentNode()
+                    
+                    if(currentCard==3){
+                        nextButton.isHidden = false
+                    }
                 }
             }
         }
