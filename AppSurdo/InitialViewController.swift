@@ -23,7 +23,7 @@ class InitialViewController: UIViewController {
     
         var rectangle = UIImageView(image: UIImage(named: "WhiteRectangle"))
         var factOfSeries = UILabel()
-        factOfSeries.text = "Fato de série"
+        factOfSeries.text = "A frase 'We were on a break' foi dita 18 vezes na série Friends."
         let command = UILabel()
         command.numberOfLines = 0
         command.text = " Procure as cartas na cena para formar uma combinação algébrica que resulte em (valor)."
