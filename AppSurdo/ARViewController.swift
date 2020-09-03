@@ -210,8 +210,9 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             //self.fact = jsonData
             print(jsonData!)
             facts.append(jsonData!)
+            let encoded = self.hideNumbers(fact: jsonData!)
             DispatchQueue.main.async {
-                self.popLabel.text = jsonData!
+                self.popLabel.text = encoded
             }
         } catch {
             print("Deu ruim")
@@ -226,6 +227,22 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             let vcEquation = segue.destination as? EquationViewController
             vcEquation?.factsOfNumbers = [facts[0], facts[1], facts[2]]
         }
+    }
+    
+    func hideNumbers(fact:String)->String{
+        
+        let hidedString = Array(fact)
+        var newString = String()
+        for index in hidedString.indices{
+            
+            if hidedString[index].isNumber{
+                newString.append("?")
+            }else{
+                newString.append(hidedString[index])
+            }
+        
+        }
+        return newString
     }
     
 }
