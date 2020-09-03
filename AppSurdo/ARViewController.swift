@@ -16,6 +16,13 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     var baseLoaded:Bool = false
     
+    @IBOutlet weak var card1: UIButton!
+    @IBOutlet weak var card2: UIButton!
+    @IBOutlet weak var card3: UIButton!
+    
+    var cubes: [SCNNode]!
+    var cardButtons: [UIButton] = []
+    var currentCard = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,7 +33,13 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         sceneView.debugOptions = [.showFeaturePoints]
         
-        
+        cardButtons = [card1,card2,card3]
+        cubes = []
+        for i in sceneView.scene.rootNode.childNodes{
+            if i.name == "cube"{
+                cubes.append(i)
+            }
+        }
         
         // Create a new scene
         //let scene = SCNScene(named: "art.scnassets/mainScene.scn")!
@@ -42,7 +55,25 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             addScenario(location: (touches.first?.location(in: sceneView))!)
         }else{
             print("Scenario loaded")
+            
+            
+            //Checking if cube was found
+            let touch = touches.first!
+
+            if(touch.view == self.sceneView){
+                print("touch working")
+                let viewTouchLocation:CGPoint = touch.location(in: sceneView)
+                guard let result = sceneView.hitTest(viewTouchLocation, options: nil).first else {
+                    return
+                }
+                if result.node.name == "cube" {
+                    cardButtons[currentCard].setImage(UIImage(named: "CardActive"), for: .normal)
+                    currentCard+=1
+                    result.node.removeFromParentNode()
+                }
+            }
         }
+        
     }
     
     func addScenario(location:CGPoint){
@@ -141,5 +172,6 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
-    
+   
+            
 }

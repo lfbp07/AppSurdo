@@ -86,6 +86,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="tiZ-i6-T5B"/>
                     <connections>
+                        <outlet property="card1" destination="Clu-cm-a6e" id="rnu-Za-hF8"/>
+                        <outlet property="card2" destination="moS-DQ-1IN" id="wEw-Nt-QjO"/>
+                        <outlet property="card3" destination="EK8-MR-Ylu" id="NJY-el-LnO"/>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="OoP-OQ-SJX"/>
                     </connections>
                 </viewController>
