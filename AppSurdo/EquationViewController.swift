@@ -11,7 +11,7 @@ import  UIKit
 
 class EquationViewController : UIViewController{
     
-    var color1 = UIColor(red: 100/255, green: 100/255, blue: 100/255, alpha: 0.7)
+    var color1 = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.7)
 
         override func viewDidLoad() {
             super.viewDidLoad()
