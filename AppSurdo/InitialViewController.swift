@@ -24,6 +24,7 @@ class InitialViewController: UIViewController {
         var rectangle = UIImageView(image: UIImage(named: "WhiteRectangle"))
         var factOfSeries = UILabel()
         factOfSeries.text = "A frase 'We were on a break' foi dita 18 vezes na série Friends."
+        factOfSeries.numberOfLines = 0
         let command = UILabel()
         command.numberOfLines = 0
         command.text = " Procure as cartas na cena para formar uma combinação algébrica que resulte em (valor)."
@@ -52,14 +53,16 @@ class InitialViewController: UIViewController {
         rectangle.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
 //         rectangle.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         //rectangle.widthAnchor.constraint(equalToConstant: self.view.frame.width*0.8).isActive = true
-        rectangle.heightAnchor.constraint(equalToConstant: 350).isActive = true
+        rectangle.heightAnchor.constraint(equalToConstant: 370).isActive = true
         
+        
+        self.view.addConstraint(NSLayoutConstraint(item: factOfSeries, attribute: .top, relatedBy: .equal, toItem: rectangle, attribute: .top, multiplier: 1.0, constant: 20))
         factOfSeries.centerXAnchor.constraint(equalTo: rectangle.centerXAnchor).isActive = true
-        factOfSeries.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        factOfSeries.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        factOfSeries.widthAnchor.constraint(equalToConstant: 250).isActive = true
+        factOfSeries.heightAnchor.constraint(equalToConstant: 100).isActive = true
 
         
-        self.view.addConstraint(NSLayoutConstraint(item: command, attribute: .top, relatedBy: .equal, toItem: factOfSeries, attribute: .bottom, multiplier: 1.0, constant: 100))
+        self.view.addConstraint(NSLayoutConstraint(item: command, attribute: .top, relatedBy: .equal, toItem: factOfSeries, attribute: .bottom, multiplier: 1.0, constant: 30))
         command.centerXAnchor.constraint(equalTo: rectangle.centerXAnchor).isActive = true
         command.widthAnchor.constraint(equalToConstant: 250).isActive = true
         command.heightAnchor.constraint(equalToConstant: 70).isActive = true
