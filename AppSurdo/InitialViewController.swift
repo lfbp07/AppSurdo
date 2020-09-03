@@ -14,11 +14,11 @@ class InitialViewController: UIViewController {
 
     @IBOutlet weak var camButton: UIButton!
     var cores: [UIColor] = []
-    
+    let test:APIHandler = APIHandler()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        test.loadFactWithNumber(number: 18)
         //let logo = UIImageView(image: UIImage(named: "Rectangle"))
     
         var rectangle = UIImageView(image: UIImage(named: "WhiteRectangle"))
@@ -30,8 +30,9 @@ class InitialViewController: UIViewController {
         command.text = " Procure as cartas na cena para formar uma combinação algébrica que resulte em (valor)."
         camButton.setImage(UIImage(named: "Cam"), for: .normal)
         
-        rectangle.addSubview(factOfSeries)
+        
         rectangle.addSubview(command)
+        rectangle.addSubview(factOfSeries)
         rectangle.addSubview(camButton)
         
         //self.view.addSubview(logo)

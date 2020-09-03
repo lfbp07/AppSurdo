@@ -14,6 +14,8 @@
 		2836F82C24FD3CAC00A75E53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2836F82A24FD3CAC00A75E53 /* LaunchScreen.storyboard */; };
 		2836F83624FD42F500A75E53 /* EquationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836F83524FD42F500A75E53 /* EquationViewController.swift */; };
 		2836F83824FD436F00A75E53 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836F83724FD436F00A75E53 /* ARViewController.swift */; };
+		2880F71825015E450041FA88 /* RandomFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880F71725015E450041FA88 /* RandomFact.swift */; };
+		2880F71A25015F0C0041FA88 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880F71925015F0C0041FA88 /* APIHandler.swift */; };
 		86BD6B5E24FD5044000920CF /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BD6B5D24FD5044000920CF /* InitialViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		2836F82D24FD3CAC00A75E53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2836F83524FD42F500A75E53 /* EquationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationViewController.swift; sourceTree = "<group>"; };
 		2836F83724FD436F00A75E53 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		2880F71725015E450041FA88 /* RandomFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFact.swift; sourceTree = SOURCE_ROOT; };
+		2880F71925015F0C0041FA88 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		86BD6B5D24FD5044000920CF /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +64,7 @@
 		2836F81E24FD3CAB00A75E53 /* AppSurdo */ = {
 			isa = PBXGroup;
 			children = (
+				2880F71725015E450041FA88 /* RandomFact.swift */,
 				2836F81F24FD3CAB00A75E53 /* AppDelegate.swift */,
 				2836F82124FD3CAB00A75E53 /* art.scnassets */,
 				2836F82524FD3CAB00A75E53 /* Main.storyboard */,
@@ -69,6 +74,7 @@
 				2836F82A24FD3CAC00A75E53 /* LaunchScreen.storyboard */,
 				2836F82D24FD3CAC00A75E53 /* Info.plist */,
 				86BD6B5D24FD5044000920CF /* InitialViewController.swift */,
+				2880F71925015F0C0041FA88 /* APIHandler.swift */,
 			);
 			path = AppSurdo;
 			sourceTree = "<group>";
@@ -166,8 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2880F71825015E450041FA88 /* RandomFact.swift in Sources */,
 				86BD6B5E24FD5044000920CF /* InitialViewController.swift in Sources */,
 				2836F83624FD42F500A75E53 /* EquationViewController.swift in Sources */,
+				2880F71A25015F0C0041FA88 /* APIHandler.swift in Sources */,
 				2836F82024FD3CAB00A75E53 /* AppDelegate.swift in Sources */,
 				2836F83824FD436F00A75E53 /* ARViewController.swift in Sources */,
 			);
@@ -314,13 +322,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T6PW3HL3N4;
+				DEVELOPMENT_TEAM = UM7BRLPWKH;
 				INFOPLIST_FILE = AppSurdo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Academy.AppSurdoo.iCarlyy;
+				PRODUCT_BUNDLE_IDENTIFIER = Academy.AppSurdoo.iCarly.Hope;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -332,13 +340,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T6PW3HL3N4;
+				DEVELOPMENT_TEAM = UM7BRLPWKH;
 				INFOPLIST_FILE = AppSurdo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Academy.AppSurdoo.iCarlyy;
+				PRODUCT_BUNDLE_IDENTIFIER = Academy.AppSurdoo.iCarly.Hope;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
