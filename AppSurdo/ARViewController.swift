@@ -11,6 +11,12 @@ import UIKit
 import SceneKit
 import ARKit
 
+//@property (nonatomic, assign) BOOL isSomethingEnabled;
+//#import "EquationViewController.swift"
+var facts: [String]! = []
+
+
+
 class ARViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
@@ -20,9 +26,14 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var card2: UIButton!
     @IBOutlet weak var card3: UIButton!
     
+    @IBOutlet weak var popView: UIView!
+    var numbers = [10,7,5]
+    @IBOutlet weak var popLabel: UILabel!
+    
     var cubes: [SCNNode]!
     var cardButtons: [UIButton] = []
     var currentCard = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,11 +52,15 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             }
         }
         
+        popLabel.numberOfLines = 0
+        
         // Create a new scene
         //let scene = SCNScene(named: "art.scnassets/mainScene.scn")!
         
         // Set the scene to the view
         //sceneView.scene = scene
+        
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -67,6 +82,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
                     return
                 }
                 if result.node.name == "cube" {
+                    loadFactWithNumber(number: numbers[currentCard])
+                    popView.isHidden = false
                     cardButtons[currentCard].setImage(UIImage(named: "CardActive"), for: .normal)
                     currentCard+=1
                     result.node.removeFromParentNode()
@@ -174,4 +191,41 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     }
    
             
+    @IBAction func tapCollect(_ sender: UIButton) {
+  
+        popView.isHidden = true
+        popLabel.text = ""
+    }
+    
+    
+    func loadFactWithNumber(number:Int) {
+        let urlStrin = "http://numbersapi.com/" + String(number)
+        let url = URL(string: urlStrin)
+        var request = URLRequest(url: url!)
+        request.httpMethod = "GET"
+        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in do {
+            
+            //let decoder = JSONDecoder()
+            let jsonData = String(data: data!, encoding: .utf8) as String?
+            //self.fact = jsonData
+            print(jsonData!)
+            facts.append(jsonData!)
+            DispatchQueue.main.async {
+                self.popLabel.text = jsonData!
+            }
+        } catch {
+            print("Deu ruim")
+            }
+        }
+      
+        task.resume()
+    }
+   
+    override func prepare (for segue: UIStoryboardSegue, sender:Any?) {
+        if segue.identifier == "EquationSegue" {
+            let vcEquation = segue.destination as? EquationViewController
+            vcEquation?.factsOfNumbers = [facts[0], facts[1], facts[2]]
+        }
+    }
+    
 }

@@ -12,31 +12,34 @@ import  UIKit
 class EquationViewController : UIViewController{
     
     var color1 = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.7)
-
+    var factsOfNumbers: [String]!
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view.
             
             let cardSpace1 = UILabel(frame: CGRect(x: 30, y: 100, width: 350, height: 130))
-            cardSpace1.text = "fato aleatório sobre número 1"
+            cardSpace1.text = factsOfNumbers[0]
             cardSpace1.textAlignment = .center
             cardSpace1.backgroundColor = color1
             cardSpace1.layer.cornerRadius = 20
             cardSpace1.layer.masksToBounds = true
+            cardSpace1.numberOfLines = 0
             
             let cardSpace2 = UILabel(frame: CGRect(x: 30, y: 260, width: 350, height: 130))
-            cardSpace2.text = "fato aleatório sobre número 2"
+            cardSpace2.text = factsOfNumbers[1]
             cardSpace2.textAlignment = .center
             cardSpace2.backgroundColor = color1
             cardSpace2.layer.cornerRadius = 20
             cardSpace2.layer.masksToBounds = true
+            cardSpace2.numberOfLines = 0
             
             let cardSpace3 = UILabel(frame: CGRect(x: 30, y: 420, width: 350, height: 130))
-            cardSpace3.text = "fato aleatório sobre número 2"
+            cardSpace3.text = factsOfNumbers[2]
             cardSpace3.textAlignment = .center
             cardSpace3.backgroundColor = color1
             cardSpace3.layer.cornerRadius = 20
             cardSpace3.layer.masksToBounds = true
+            cardSpace3.numberOfLines = 0
             
             let answerSpace1 = UILabel(frame: CGRect(x: 30, y: 630, width: 70, height: 50))
             answerSpace1.text = "1"
@@ -45,6 +48,7 @@ class EquationViewController : UIViewController{
             answerSpace1.layer.borderWidth = 2
             answerSpace1.layer.cornerRadius = 10
             answerSpace1.layer.masksToBounds = true
+            
             
             let equationSignal1 = UILabel(frame: CGRect(x: 105, y: 630, width: 50, height: 50))
             equationSignal1.text = "+"
