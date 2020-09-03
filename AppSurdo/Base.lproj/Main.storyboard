@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SuperfruitBold-MlBY.ttf">
+            <string>Superfruit-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Initial View Controller-->
         <scene sceneID="JFJ-gr-8UU">
@@ -89,28 +94,31 @@
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QnH-B7-yh0">
-                                <rect key="frame" x="53" y="255" width="295" height="229"/>
+                                <rect key="frame" x="60" y="257" width="295" height="229"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RectangleFact" translatesAutoresizingMaskIntoConstraints="NO" id="Huc-2f-PBS">
                                         <rect key="frame" x="-19" y="-55" width="337" height="350"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btd-IU-5qR">
-                                        <rect key="frame" x="115" y="181" width="60" height="42"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaJ-tg-sga">
+                                        <rect key="frame" x="31" y="21" width="235" height="168"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Collect"/>
+                                        <fontDescription key="fontDescription" name="Superfruit-Bold" family="Superfruit" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btd-IU-5qR">
+                                        <rect key="frame" x="99" y="191" width="100" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Superfruit-Bold" family="Superfruit" pointSize="20"/>
+                                        <state key="normal" title="Collect" backgroundImage="PinkRectangle">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="tapCollect:" destination="BV1-FR-VrT" eventType="touchUpInside" id="gTU-xX-DTR"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaJ-tg-sga">
-                                        <rect key="frame" x="31" y="21" width="235" height="168"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -179,6 +187,7 @@
         <image name="Background" width="236" height="512"/>
         <image name="Cam" width="484" height="512"/>
         <image name="Card" width="512" height="512"/>
+        <image name="PinkRectangle" width="185" height="72"/>
         <image name="RectangleFact" width="412" height="327"/>
     </resources>
 </document>
