@@ -18,7 +18,7 @@ class EquationViewController : UIViewController{
             // Do any additional setup after loading the view.
             
             let cardSpace1 = UILabel(frame: CGRect(x: 30, y: 100, width: 350, height: 130))
-            cardSpace1.text = factsOfNumbers[0]
+            cardSpace1.text = hideNumbers(fact: factsOfNumbers[0])
             cardSpace1.textAlignment = .center
             cardSpace1.backgroundColor = color1
             cardSpace1.layer.cornerRadius = 20
@@ -26,7 +26,7 @@ class EquationViewController : UIViewController{
             cardSpace1.numberOfLines = 0
             
             let cardSpace2 = UILabel(frame: CGRect(x: 30, y: 260, width: 350, height: 130))
-            cardSpace2.text = factsOfNumbers[1]
+            cardSpace2.text = hideNumbers(fact: factsOfNumbers[1])
             cardSpace2.textAlignment = .center
             cardSpace2.backgroundColor = color1
             cardSpace2.layer.cornerRadius = 20
@@ -34,7 +34,7 @@ class EquationViewController : UIViewController{
             cardSpace2.numberOfLines = 0
             
             let cardSpace3 = UILabel(frame: CGRect(x: 30, y: 420, width: 350, height: 130))
-            cardSpace3.text = factsOfNumbers[2]
+            cardSpace3.text = hideNumbers(fact: factsOfNumbers[2])
             cardSpace3.textAlignment = .center
             cardSpace3.backgroundColor = color1
             cardSpace3.layer.cornerRadius = 20
@@ -104,5 +104,22 @@ class EquationViewController : UIViewController{
             self.view.addSubview(answer)
             
     }
+    
+    func hideNumbers(fact:String)->String{
+        
+        let hidedString = Array(fact)
+        var newString = String()
+        for index in hidedString.indices{
+            
+            if hidedString[index].isNumber{
+                newString.append("?")
+            }else{
+                newString.append(hidedString[index])
+            }
+        
+        }
+        return newString
+    }
+
     
 }
