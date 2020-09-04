@@ -35,6 +35,7 @@ class InitialViewController: UIViewController {
         factOfSeries.font = UIFont(name: "Superfruit", size: 25)
         factOfSeries.text = "A frase 'We were on a break' foi dita 18 vezes na série Friends."
         factOfSeries.numberOfLines = 0
+        factOfSeries.textColor = .black
         factOfSeries.textAlignment = .center
         let command = UILabel()
         command.numberOfLines = 0

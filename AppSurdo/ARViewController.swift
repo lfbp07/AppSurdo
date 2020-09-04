@@ -54,7 +54,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         }
         
         popLabel.numberOfLines = 0
-        
+        popLabel.textColor = .black
         // Create a new scene
         //let scene = SCNScene(named: "art.scnassets/mainScene.scn")!
         
