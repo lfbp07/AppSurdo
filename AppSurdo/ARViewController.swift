@@ -27,7 +27,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var card3: UIButton!
     
     @IBOutlet weak var popView: UIView!
-    var numbers = [10,7,5]
+    var numbers = [10,15,7]
     @IBOutlet weak var popLabel: UILabel!
     
     var cubes: [SCNNode]!
