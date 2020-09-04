@@ -13,11 +13,17 @@ class EquationViewController : UIViewController{
     
     var color1 = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
     var factsOfNumbers: [String]!
-        override func viewDidLoad() {
+    @IBOutlet weak var popImageview: UIImageView!
+    @IBOutlet weak var popLabel: UILabel!
+    @IBOutlet weak var popBtm: UIButton!
+    var cardSpace1,cardSpace2, cardSpace3: UILabel!
+    var correct = false
+    
+    override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view.
             
-            let cardSpace1 = UILabel(frame: CGRect(x: 30, y: 100, width: 350, height: 130))
+            cardSpace1 = UILabel(frame: CGRect(x: 30, y: 100, width: 350, height: 130))
             cardSpace1.text = hideNumbers(fact: factsOfNumbers[0])
             cardSpace1.textColor = .black
             cardSpace1.textAlignment = .center
@@ -26,7 +32,7 @@ class EquationViewController : UIViewController{
             cardSpace1.layer.masksToBounds = true
             cardSpace1.numberOfLines = 0
             
-            let cardSpace2 = UILabel(frame: CGRect(x: 30, y: 260, width: 350, height: 130))
+            cardSpace2 = UILabel(frame: CGRect(x: 30, y: 260, width: 350, height: 130))
             cardSpace2.text = hideNumbers(fact: factsOfNumbers[1])
             cardSpace2.textColor = .black
             cardSpace2.textAlignment = .center
@@ -35,7 +41,7 @@ class EquationViewController : UIViewController{
             cardSpace2.layer.masksToBounds = true
             cardSpace2.numberOfLines = 0
             
-            let cardSpace3 = UILabel(frame: CGRect(x: 30, y: 420, width: 350, height: 130))
+            cardSpace3 = UILabel(frame: CGRect(x: 30, y: 420, width: 350, height: 130))
             cardSpace3.text = hideNumbers(fact: factsOfNumbers[2])
             cardSpace3.textColor = .black
             cardSpace3.textAlignment = .center
@@ -130,5 +136,47 @@ class EquationViewController : UIViewController{
         return newString
     }
 
+    func checkAnswer(){
+        // Fazer checagem do picker e muda valor de variavel "correct"
+    }
     
+    func showPop(correct: Bool){
+        
+        
+        if(correct){
+            popImageview.image = UIImage(named: "RectangleCorrect")
+            popLabel.text = "Parabéns"
+            popBtm.titleLabel?.text = "Revelar números"
+            
+            
+        }else{
+            popImageview.image = UIImage(named: "RectangleWrong")
+            popLabel.text = "Tente novamente"
+            popBtm.titleLabel?.text = "OK"
+        }
+        
+        popLabel.font = UIFont(name: "Superfruit", size: 27)
+        popBtm.setImage(UIImage(named: "PinkRectangle"), for: .normal)
+        
+        popImageview.isHidden = false
+        popBtm.isHidden = false
+        popLabel.isHidden = false
+    }
+    
+    @IBAction func revealNumbers(_ sender: Any) {
+        popImageview.isHidden = true
+        popBtm.isHidden = true
+        popLabel.isHidden = true
+        
+        if (correct){
+            cardSpace1.text = factsOfNumbers[0]
+            cardSpace2.text = factsOfNumbers[1]
+            cardSpace3.text = factsOfNumbers[2]
+        }
+        
+        
+        
+        
+       
+    }
 }
