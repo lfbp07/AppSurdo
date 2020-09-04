@@ -326,13 +326,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UM7BRLPWKH;
+				DEVELOPMENT_TEAM = RGBZBCSCUU;
 				INFOPLIST_FILE = AppSurdo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Academy.AppSurdoo.iCarly.Hope;
+				PRODUCT_BUNDLE_IDENTIFIER = finxAppsurdo;
 				PRODUCT_NAME = Finx;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -344,13 +344,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UM7BRLPWKH;
+				DEVELOPMENT_TEAM = RGBZBCSCUU;
 				INFOPLIST_FILE = AppSurdo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Academy.AppSurdoo.iCarly.Hope;
+				PRODUCT_BUNDLE_IDENTIFIER = finxAppsurdo;
 				PRODUCT_NAME = Finx;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
