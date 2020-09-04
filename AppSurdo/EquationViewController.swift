@@ -31,6 +31,8 @@ class EquationViewController : UIViewController, UIPickerViewDelegate, UIPickerV
     let equationSignal2 = UILabel(frame: CGRect(x: 250, y: 630, width: 50, height: 50))
     let answerSpace3 = UITextField(frame: CGRect(x: 310, y: 630, width: 70, height: 50))
     let answer = UILabel(frame: CGRect(x: 165, y: 740, width: 80, height: 60))
+    
+    var pickerView1, pickerView2, pickerView3: UIPickerView!
 
     
     override func viewDidLoad() {
@@ -38,36 +40,41 @@ class EquationViewController : UIViewController, UIPickerViewDelegate, UIPickerV
             super.viewDidLoad()
             // Do any additional setup after loading the view.
         
-            createPickerView1()
+            pickerView1 = createPickerView1()
             dismissPickerView1()
-            createPickerView2()
+            pickerView2 = createPickerView2()
             dismissPickerView2()
-            createPickerView3()
+            pickerView3 = createPickerView3()
             dismissPickerView3()
             
-            cardSpace1.text = hideNumbers(fact: factsOfNumbers[0])
+            cardSpace1.text = "A \n" + hideNumbers(fact: factsOfNumbers[0])
             cardSpace1.textColor = .black
             cardSpace1.textAlignment = .center
             cardSpace1.backgroundColor = color1
             cardSpace1.layer.cornerRadius = 20
             cardSpace1.layer.masksToBounds = true
             cardSpace1.numberOfLines = 0
+            cardSpace1.font = UIFont(name: "Superfruit", size:20 )
         
-            cardSpace2.text = hideNumbers(fact: factsOfNumbers[1])
+            cardSpace2.text = "B \n" + hideNumbers(fact: factsOfNumbers[1])
             cardSpace2.textColor = .black
             cardSpace2.textAlignment = .center
             cardSpace2.backgroundColor = color1
             cardSpace2.layer.cornerRadius = 20
             cardSpace2.layer.masksToBounds = true
             cardSpace2.numberOfLines = 0
+            cardSpace2.font = UIFont(name: "Superfruit", size:20 )
+
             
-            cardSpace3.text = hideNumbers(fact: factsOfNumbers[2])
+            cardSpace3.text = "C \n" + hideNumbers(fact: factsOfNumbers[2])
             cardSpace3.textColor = .black
             cardSpace3.textAlignment = .center
             cardSpace3.backgroundColor = color1
             cardSpace3.layer.cornerRadius = 20
             cardSpace3.layer.masksToBounds = true
             cardSpace3.numberOfLines = 0
+            cardSpace3.font = UIFont(name: "Superfruit", size:20 )
+
             
 //            answerSpace1.text = "1"
             answerSpace1.textColor = .black
@@ -76,7 +83,8 @@ class EquationViewController : UIViewController, UIPickerViewDelegate, UIPickerV
             answerSpace1.layer.borderWidth = 2
             answerSpace1.layer.cornerRadius = 10
             answerSpace1.layer.masksToBounds = true
-            
+            answerSpace1.font = UIFont(name: "Superfruit", size:20 )
+        
             equationSignal1.text = "+"
             equationSignal1.textColor = .black
             equationSignal1.textAlignment = .center
@@ -90,6 +98,7 @@ class EquationViewController : UIViewController, UIPickerViewDelegate, UIPickerV
             answerSpace2.layer.borderWidth = 2
             answerSpace2.layer.cornerRadius = 10
             answerSpace2.layer.masksToBounds = true
+            answerSpace2.font = UIFont(name: "Superfruit", size:20 )
             
             equationSignal2.text = "-"
             equationSignal2.textColor = .black
@@ -104,6 +113,7 @@ class EquationViewController : UIViewController, UIPickerViewDelegate, UIPickerV
             answerSpace3.layer.borderWidth = 2
             answerSpace3.layer.cornerRadius = 10
             answerSpace3.layer.masksToBounds = true
+            answerSpace3.font = UIFont(name: "Superfruit", size:20 )
             
     //        let equationSignal3 = UILabel(frame: CGRect(x: 30, y: 650, width: 50, height: 50))
     //        equationSignal3.text = "="
@@ -129,6 +139,9 @@ class EquationViewController : UIViewController, UIPickerViewDelegate, UIPickerV
             self.view.addSubview(answerSpace3)
     //        self.view.addSubview(equationSignal3)
             self.view.addSubview(answer)
+            self.view.addSubview(popImageview)
+            self.view.addSubview(popLabel)
+            self.view.addSubview(popBtm)
             
     }
     
@@ -219,12 +232,14 @@ class EquationViewController : UIViewController, UIPickerViewDelegate, UIPickerV
         
     }
 
-    func createPickerView1() {
+    func createPickerView1() -> UIPickerView {
         
         let pickerView1 = UIPickerView()
         pickerView1.delegate = self
         answerSpace1.inputView = pickerView1
         pickerView1.tag = 1
+        
+        return pickerView1
         
     }
 
@@ -238,15 +253,21 @@ class EquationViewController : UIViewController, UIPickerViewDelegate, UIPickerV
         toolBar1.isUserInteractionEnabled = true
         answerSpace1.inputAccessoryView = toolBar1
         
+//        if (answerSpace1.text != nil && answerSpace2.text != nil && answerSpace3.text != nil){
+//            checkAnswer()
+//        }
+        
     }
 
-    func createPickerView2() {
+    func createPickerView2() -> UIPickerView {
         
         let pickerView2 = UIPickerView()
         pickerView2.delegate = self
         answerSpace2.inputView = pickerView2
         pickerView2.tag = 2
         print("create")
+        
+        return pickerView2
         
     }
 
@@ -260,15 +281,21 @@ class EquationViewController : UIViewController, UIPickerViewDelegate, UIPickerV
         toolBar2.isUserInteractionEnabled = true
         answerSpace2.inputAccessoryView = toolBar2
         
+//        if (answerSpace1.text != nil && answerSpace2.text != nil && answerSpace3.text != nil){
+//            checkAnswer()
+//        }
+        
     }
 
-    func createPickerView3() {
+    func createPickerView3() -> UIPickerView{
         
         let pickerView3 = UIPickerView()
         pickerView3.delegate = self
         answerSpace3.inputView = pickerView3
         pickerView3.tag = 3
         print("create")
+        
+        return pickerView3
         
     }
 
@@ -282,11 +309,30 @@ class EquationViewController : UIViewController, UIPickerViewDelegate, UIPickerV
         toolBar3.isUserInteractionEnabled = true
         answerSpace3.inputAccessoryView = toolBar3
         
+//        if (answerSpace1.text != nil && answerSpace2.text != nil && answerSpace3.text != nil){
+//            checkAnswer()
+//        }
     }
 
+//    pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+//    {
+//
+//        [UIView beginAnimations:@"1" context:nil]; // nil = dummy
+//        [UIPickerView setAnimationDelegate:self];
+//        [UIPickerView setAnimationDidStopSelector:@selector(animationFinished:finished:context:)];
+//        [myPickerView selectRow:0 inComponent:0 animated:YES]; // jump with any swipe in picker always to row=0 as dummy to initiate animation
+//        [UIView commitAnimations];
+//
+//        //...whatever comes in addition...
+//    }
+//
     @objc func action() {
         
        view.endEditing(true)
+        if (answerSpace1.text != "" && answerSpace2.text != "" && answerSpace3.text != ""){
+            print(answerSpace3)
+            checkAnswer()
+          }
         
     }
 
@@ -320,7 +366,7 @@ class EquationViewController : UIViewController, UIPickerViewDelegate, UIPickerV
         else {
             
             correct = false
-            
+            showPop(correct: false)
         }
         
     }
@@ -340,8 +386,8 @@ class EquationViewController : UIViewController, UIPickerViewDelegate, UIPickerV
         }
         
         popLabel.font = UIFont(name: "Superfruit", size: 27)
-        popBtm.setImage(UIImage(named: "PinkRectangle"), for: .normal)
-        
+        //popBtm.setImage(UIImage(named: "PinkRectangle"), for: .normal)
+        popBtm.titleLabel?.font = UIFont(name: "Superfruit", size: 15)
         popImageview.isHidden = false
         popBtm.isHidden = false
         popLabel.isHidden = false

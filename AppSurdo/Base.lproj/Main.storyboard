@@ -15,7 +15,7 @@
         <!--Initial View Controller-->
         <scene sceneID="JFJ-gr-8UU">
             <objects>
-                <viewController id="slH-Ed-jST" customClass="InitialViewController" customModule="AppSurdo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="slH-Ed-jST" customClass="InitialViewController" customModule="Finx" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e5W-ug-wWJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,7 +60,7 @@
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ARViewController" customModule="AppSurdo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="ARViewController" customModule="Finx" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -154,7 +154,7 @@
         <!--Equation View Controller-->
         <scene sceneID="6Ry-Gf-KIt">
             <objects>
-                <viewController id="dkw-ts-Veh" customClass="EquationViewController" customModule="AppSurdo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dkw-ts-Veh" customClass="EquationViewController" customModule="Finx" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q1L-Jq-0gR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,9 +174,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwE-IE-Vhx">
-                                <rect key="frame" x="136" y="742" width="143" height="29"/>
+                                <rect key="frame" x="136" y="722" width="143" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="OK" backgroundImage="PinkRectangle">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="revealNumbers:" destination="dkw-ts-Veh" eventType="touchUpInside" id="v0M-98-yYv"/>
                                 </connections>
