@@ -66,8 +66,6 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if baseLoaded == false{
-            print("Load scenario")
-            baseLoaded = true
             addScenario(location: (touches.first?.location(in: sceneView))!)
         }else{
             print("Scenario loaded")
@@ -107,6 +105,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             let rootNode = scene.rootNode.childNode(withName: "BaseReference", recursively: false)
             rootNode?.position = newPosition
             sceneView.scene = scene
+            print("Load scenario")
+            baseLoaded = true
         }
     }
     

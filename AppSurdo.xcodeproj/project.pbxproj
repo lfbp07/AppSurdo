@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2836F81C24FD3CAB00A75E53 /* AppSurdo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppSurdo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2836F81C24FD3CAB00A75E53 /* Finx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2836F81F24FD3CAB00A75E53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2836F82124FD3CAB00A75E53 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		2836F82624FD3CAB00A75E53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 		2836F81D24FD3CAB00A75E53 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2836F81C24FD3CAB00A75E53 /* AppSurdo.app */,
+				2836F81C24FD3CAB00A75E53 /* Finx.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,7 +100,7 @@
 			);
 			name = AppSurdo;
 			productName = AppSurdo;
-			productReference = 2836F81C24FD3CAB00A75E53 /* AppSurdo.app */;
+			productReference = 2836F81C24FD3CAB00A75E53 /* Finx.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -326,14 +326,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T6PW3HL3N4;
+				DEVELOPMENT_TEAM = UM7BRLPWKH;
 				INFOPLIST_FILE = AppSurdo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Academy.AppSurdoo.iCarly.Hope;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Finx;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -344,14 +344,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T6PW3HL3N4;
+				DEVELOPMENT_TEAM = UM7BRLPWKH;
 				INFOPLIST_FILE = AppSurdo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Academy.AppSurdoo.iCarly.Hope;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Finx;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
